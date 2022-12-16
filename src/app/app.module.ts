@@ -18,6 +18,11 @@ import {MatCardModule} from '@angular/material/card';
 import { CategoryReadComponent } from './components/views/category/category-read/category-read.component';
 import {MatTableModule} from '@angular/material/table'; 
 import {MatButtonModule} from '@angular/material/button';
+import { CategoryCreatComponent } from './components/views/category/category-create/category-create.component';
+import { FormsModule } from '@angular/forms';
+import {MatInputModule} from '@angular/material/input'; 
+import {MatFormFieldModule} from '@angular/material/form-field'; 
+
 
 
 @NgModule({
@@ -27,7 +32,9 @@ import {MatButtonModule} from '@angular/material/button';
     FooterComponent,
     NavComponent,
     HomeComponent,
-    CategoryReadComponent
+    CategoryReadComponent,
+    CategoryCreatComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -40,7 +47,11 @@ import {MatButtonModule} from '@angular/material/button';
     MatCardModule,
     MatTableModule,
     HttpClientModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule,
+    MatInputModule,
+    MatFormFieldModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
