@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Category } from '../category.model';
+import { CategoryService } from '../category.service';
 
 @Component({
   selector: 'app-category-creat',
@@ -7,9 +10,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoryCreatComponent implements OnInit {
 
-  constructor() { }
+  category: Category = {
+    name: '',
+    description: ''
+  }
+
+  constructor(private service: CategoryService, private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  create(): void {
+    this.service.create(this.category).subscribe((reponse) => {
+      this.service.menssage('Category Ceated');
+      this.router.navigate(['categories'])
+    }, err => {
+      for (let i = 0; i < err.error.erros.length; i++) {
+        this.service.menssage(err.error.erros[i].message)
+      }
+    })
+
   }
 
 }
