@@ -28,8 +28,10 @@ export class CategoryCreatComponent implements OnInit {
       for (let i = 0; i < err.error.erros.length; i++) {
         this.service.menssage(err.error.erros[i].message)
       }
-    })
+    }) }
 
-  }
+    cancel():void{
+      this.router.navigate(['categories'])
+    }
 
 }
