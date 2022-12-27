@@ -43,7 +43,10 @@ export class BookCreateComponent implements OnInit {
       this.service.menssage("error to create book")
 
     })
+  }
 
+  cancel():void{
+    this.router.navigate([`categories/${this.id_cat}/books`]);
   }
 
   getMessage() {
