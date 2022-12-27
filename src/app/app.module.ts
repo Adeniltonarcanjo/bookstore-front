@@ -19,13 +19,14 @@ import { CategoryReadComponent } from './components/views/category/category-read
 import {MatTableModule} from '@angular/material/table'; 
 import {MatButtonModule} from '@angular/material/button';
 import { CategoryCreatComponent } from './components/views/category/category-create/category-create.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatInputModule} from '@angular/material/input'; 
 import {MatFormFieldModule} from '@angular/material/form-field'; 
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { CategoryDeleteComponent } from './components/views/category/category-delete/category-delete.component';
 import { CategoryUpdateComponent } from './components/views/category/category-update/category-update.component';
-import { BookReadAllComponent } from './components/views/book/book-read-all/book-read-all.component'; 
+import { BookReadAllComponent } from './components/views/book/book-read-all/book-read-all.component';
+import { BookCreateComponent } from './components/views/book/book-create/book-create.component'; 
 
 
 
@@ -41,6 +42,7 @@ import { BookReadAllComponent } from './components/views/book/book-read-all/book
     CategoryDeleteComponent,
     CategoryUpdateComponent,
     BookReadAllComponent,
+    BookCreateComponent,
    
   ],
   imports: [
@@ -58,7 +60,8 @@ import { BookReadAllComponent } from './components/views/book/book-read-all/book
     FormsModule,
     MatInputModule,
     MatFormFieldModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    ReactiveFormsModule
     
   ],
   providers: [],

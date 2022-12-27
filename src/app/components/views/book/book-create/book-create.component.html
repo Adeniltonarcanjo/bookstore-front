@@ -1,0 +1,27 @@
+<form>
+    <h1>Creating a new Book</h1>
+    <mat-form-field class="form">
+        <mat-label>Title</mat-label>
+        <input matInput [(ngModel)]="book.title" [formControl]="title" required  type="text" name="Title" placeholder="Ex. O Mundo Assombrado Pelos Demônios" maxlength="100">
+        <mat-error *ngIf="title.invalid">{{ getMessage() }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>Author</mat-label>
+        <input matInput [(ngModel)]="book.author"  [formControl]="author" required  type="text" name="Author" placeholder="Ex. Carl Sagan" maxlength="100">
+        <mat-error *ngIf="author.invalid">{{ getMessage() }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>Text</mat-label>
+        <textarea   matInput [(ngModel)]="book.text"  [formControl]="text" required type="text" name="Text" placeholder="Ex. Assombrado com as explicações pseudocientíficas e místicas que ocupam cada vez mais os espaços dos meios de comunicação, Carl Sagan reafirma o poder positivo e benéfico da ciência e da tecnologia para iluminar os dias de hoje e recuperar os valores da racionalidade..." maxlength="2000000"></textarea>
+        <mat-error *ngIf="text.invalid">{{ getMessage() }}</mat-error>
+
+    </mat-form-field>
+
+    <div class="buttons">
+        <button (click)="create()" [disabled]="getMessage()"  class="mat-elevation-z8"  mat-stroked-button color="primary">Create</button>
+        <button  class="mat-elevation-z8"  mat-stroked-button color="warn">Cancel</button>
+    </div>
+
+</form>
