@@ -28,7 +28,8 @@ import { CategoryUpdateComponent } from './components/views/category/category-up
 import { BookReadAllComponent } from './components/views/book/book-read-all/book-read-all.component';
 import { BookCreateComponent } from './components/views/book/book-create/book-create.component';
 import { BookUpdateComponent } from './components/views/book/book-update/book-update.component';
-import { BookDeleteComponent } from './components/views/book/book-delete/book-delete.component'; 
+import { BookDeleteComponent } from './components/views/book/book-delete/book-delete.component';
+import { BookReadComponent } from './components/views/book/book-read/book-read.component'; 
 
 
 
@@ -47,6 +48,7 @@ import { BookDeleteComponent } from './components/views/book/book-delete/book-de
     BookCreateComponent,
     BookUpdateComponent,
     BookDeleteComponent,
+    BookReadComponent,
    
   ],
   imports: [

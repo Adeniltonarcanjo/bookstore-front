@@ -1,0 +1,22 @@
+form{
+    width: 90%;
+    margin: auto;
+}
+
+.home_title{
+    margin: 0.5rem auto;
+    text-align: center;
+}
+.home_author{
+    margin: 0.5rem auto;
+    text-align: center;
+}
+.home_text{
+    margin: 0.5rem auto;
+    text-align: justify;
+}
+
+.home_author_button{
+    width: 100%;
+    background-color: rgb(143, 135, 135);
+}
