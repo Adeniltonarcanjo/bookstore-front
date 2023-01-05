@@ -28,6 +28,11 @@ export class BookService {
     return this.http.put<Book>(url,book)
   }
 
+  delete(id:String):Observable<void>{
+    const url=`${this.baseUrl}/books/${id}`
+    return this.http.delete<void>(url)
+  }
+
   create(book:Book , id_cat:String):Observable<Book>{
     const url=`${this.baseUrl}/books?category=${id_cat}`
     return this.http.post<Book>(url, book)
